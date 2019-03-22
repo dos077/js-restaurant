@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+@import 'setting';
+@import 'reset';
+@import 'mixins';
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+h1 { font-size: 6.7em; }
+h2 { font-size: 4.2em; }
+h3 { font-size: 2.6em; }
+h4 { font-size: 1.6em; }
+
+#title-bar {
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+  background-color: $primary-background;
+  box-shadow: 0 1px 2px rgba(0,0,0,.4);
+  #logo {
+    position: relative;
+    padding: 1em;
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    h3 {
+      display: block;
+      width: 10em;
+      margin: 0 auto;
+    }
+    button {
+      position: absolute;
+      top: 1.5em;
+      right: 1em;
+      background-color: #00cc66;
+    }
+  }
+  .flash {
+    width: auto;
+    margin: 0 auto;
+    font-weight: 100;
+    color: #ccc;
+    line-height: 2em;
+    text-align: center;
+  }
+}
+
+#footnote {
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  a {
+    text-decoration: none;
+    &:hover {
+      color: $primary-link;
+      text-decoration: underline;
+    }
+  }
+}
+
+div#main-container {
+  min-width: 400px;
+  max-width: 1200px;
+  margin: 0 auto 2em;
+  padding: 0 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  table {
+    width: 100%;
+    thead {
+      font-weight: bold;
+    }
+  }
+}
+
+div.card {
+  width: 15em;
+  height: auto;
+  margin: 1em;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid $primary-border-color;
+  border-radius: .5em;
+  background-color: #eee;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  header {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: .5em;
+    background: #666;
+    color: white;
+    input {
+      color: white;
+      margin: 0;
+    }
+  }
+  p {
+    padding: 1em 1em 1.5em;
+  }
+  button {
+    margin: 0 auto;
+    background-color: #eee;
+  }
+  button.remove {margin-bottom: 1em;
+    background-color: #cc3300;
+    color: white;
+  }
+  input {
+    margin: 1em 1em 1.5em;
+    width: 12em;
+    border: 0;
+    font-size: 1em;
+    border-bottom: 1px $primary-border-color solid;
+    &.alert {
+      box-shadow: 0 0 3px 2px rgba(255,102,102,.6);
+    }
+  }
+}
+
+button {
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+    line-height: 100%;
+    border: none;
+    border-radius: .75em;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+    &:hover {
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, .6) inset;
+    }
+}
