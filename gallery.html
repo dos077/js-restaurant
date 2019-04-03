@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="bundle.css">
+    <style>
+      .gallery .thumbnails { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        align-content: space-between;
+        background: #ebebeb;
+      }
+      .gallery .thumbnails a{
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        overflow: hidden;
+      }
+      .gallery .thumbnails img {
+        position: absolute;
+        top: 0;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="main container inset-border">
+      <div class="right-border"></div>
+      <div class="left-border"></div>
+      <div class="fade-out"></div>
+      <footer class="fade-in">
+      </footer>
+      <div class="floating-menu">
+        <div id="open-menu" class="open">
+          <div class="btn"></div>
+        </div>
+        <span  id="close-menu" class="close"><div class="btn"></div></span>
+        <span>About Us</span>
+        <span>Menu</span>
+        <span>Drinks</span>
+        <span>Reservation</span>
+        <span>Online Order</span>
+      </div>
+      <section id="logo" class="logo gold-v-1 align-center"><h2>FREEMANS</h2></section>
+
+      <section class="unfaded gallery" >
+        <div id="display" class="full-width gold-v-13 bg-cover sticky-top" style="background-image: url('img/1.jpg')"></div>
+        <div class="thumbnails full-width">
+          <a><img src="img/1.jpg"></a>
+          <a><img src="img/2.jpg"></a>
+          <a><img src="img/3.jpg"></a>
+          <a><img src="img/4.jpg"></a>
+          <a><img src="img/5.jpg"></a>
+          <a><img src="img/6.jpg"></a>
+          <a><img src="img/7.jpg"></a>
+          <a><img src="img/8.jpg"></a>
+          <a><img src="img/9.jpg"></a>
+        </div>
+      </section>
+      
+      <section class="info centered">
+        <a href>Mailing List</a>
+      </section>
+
+    </div>
+
+  </body>
+</html>
