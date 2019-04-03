@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+@import 'setting';
+@import 'reset';
+@import 'mixins';
+
+body {
+  font-family: 'Merriweather', serif;
+  color: $prime-color;
+  font-size: 3vmin;
+  line-height: 1.3em;
+  background-color: $prime-bg;
+}
+
+h1 { font-size: 2.6em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.26em; }
+
+div.main {
+  width: 100%;
+  min-height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  section { margin-bottom: 1rem; }
+  section:last-child {
+    margin-bottom: 3.5rem;
+  }
+  margin-bottom: -3.5rem;  
+}
+
+.sticky-bottom {
+  position: sticky;
+  z-index: 101;
+  bottom: 0;
+}
+
+.inset-border {
+  &:before, &:after {
+    content: " ";
+    position: fixed;
+    z-index: 199;
+    left: 5px;
+    right: 5px;
+    border-top: 1px solid $prime-border;
+  }
+  &:before { top: 5px; }
+  &:after { bottom: 5px; }
+  .left-border, .right-border {
+    position: fixed;
+    z-index: 199;
+    top: 5px;
+    bottom: 5px;
+    border-left: 1px solid $prime-border;
+  }
+  .left-border { left: 5px; }
+  .right-border { right: 5px; }
+}
+
+footer {
+  margin: 1.5rem 10px 15px;
+}
+
+[class*='fade-'] { 
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 5px;
+  background-color: $prime-bg;
+  box-shadow: 0 0 10px 5px $prime-bg;
+  &[class*='-in'] { bottom: 0; padding-bottom: 0; }
+  &[class*='-out'] { top: 0;  }
+}
+
+.unfaded {
+  z-index: 100;
+}
+
+.logo {
+  margin-bottom: .5rem;
+  h1,h2,h3,h4 {
+    display: block;
+    width: 100%;
+    line-height: 1.26em;
+    text-align: center;
+  }
+}
+
+div.floating-menu {
+  position: fixed;
+  z-index: 999;
+  top: 10px;
+  left: 0;
+  display: block;
+  box-sizing: content-box;
+  padding: .4rem .4rem .4rem 15px;
+  .open, .close { width: 1.8rem; height: 1.8rem; }
+  .btn{
+    display: block;
+    position: relative;
+    top: 36%;
+    width: 100%;
+    height: 22%;
+    box-shadow: 0 0 0 1px $acc-color inset;
+    overflow: visible;
+    &:before{
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: absolute;
+      top: -164%;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 0 1px $acc-color inset;
+    }
+    &:after{
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: absolute;
+      top: 164%;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 0 1px $acc-color inset;
+    }
+  }
+  span { display: none; }
+  &.colored {
+    background-color: $acc-color;
+    opacity: .9;
+    .btn, .btn:before, .btn:after {
+      background-color: white;
+    }
+  }
+  &.expand {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    width: 12.5rem;
+    height: 100%;
+    background: $acc-color;
+    color: white;
+    opacity: 1;
+    span {
+      display: block;
+      font-size: 2em;
+      margin-bottom: 2rem;
+    }
+    .btn, .btn:before, .btn:after { background-color: white; }
+    .open { display: none; }
+    animation: bounce-in .5s;
+  }
+  transition: position .5s, background-color .5s;
+}
+
+@keyframes bounce-in {
+  0% { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+[class*='gold-v'] { overflow: hidden; }
+
+.gold-v-13 { height: 62vh; }
+.gold-v-2 { height: 9.5vh; }
+.gold-v-1 { height: 4.7vh; }
+
+
+.inset-border {
+ .full-width { margin-left: -15px; } 
+}
+.full-width {
+  width: 100vw;
+}
+
+.bg-cover {
+  z-index: 100;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.story {
+  padding: .5rem .5rem 1.5rem;
+}
+
+.align-bottom {
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.align-center {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  position: relative;
+  z-index: 101;
+  padding: .1rem .3rem .3rem; 
+  line-height: 1.5rem;
+  span{ 
+    background-color: $prime-bg;
+    outline: .3rem solid $prime-bg;
+  }
+}
+
+.up-3-lines { margin-top: -3em; }
+
+.info {
+  p { 
+    margin-bottom: .8rem;
+    padding: 0 2rem;
+  }
+  strong { font-weight: bold; }
+}
+
+.section-title {
+  width: 100%;
+  margin: 2rem 0 1rem;
+  color: $acc-color;
+  font-size: 1rem;
+}
+
+.centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+a[class*="btn-"] {
+  display: inline-block;
+  padding: .4rem .5rem .5rem;
+  margin: 0 .5rem 0;
+  text-decoration: none;
+  &[class*="-line"] {
+    margin: 8px;
+    border-radius: 4px;
+    border: 1px solid $prime-border;
+  }
+}
+
+section.tabs {
+  .nav {
+    position: sticky;
+    z-index: 2;
+    top: 10px;
+    background-color: white;
+    font-size: 1.2em;
+    line-height: 2.6rem;
+    a {
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+      margin: 0 .8em;
+      &:hover{ color: $acc-color; }
+      &.current:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        bottom: .7rem;
+        width: 100%;
+        height: .3em;
+        background-color: $acc-color;
+      }
+    }
+  }
+}
+
+div.tab {
+  .section-title {
+    width: 100%;
+    margin: 2.2rem 0 1rem;
+    font-size: 1.2em;
+    color: $acc-color;
+  }
+  dl.menu {
+    display: block;
+    width: 20rem;
+    margin: 0 auto;
+    line-height: 1.6em;
+    dt {
+      position: relative;
+      width: 20rem;
+      padding-right: 3rem;
+      font-weight: bold;
+      .price {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: normal;
+      }
+    }
+    dd{
+      width: 17rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.hide { display: none; }
