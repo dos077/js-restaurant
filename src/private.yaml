@@ -1,0 +1,213 @@
+type: root
+children:
+-
+  type: section
+  id: logo
+  class: [logo,gold-v-2,align-center]
+  children:
+  -
+    type: h2
+    content: FREEMANS
+  -
+    type: h3
+    content: Private Dinning
+-
+  type: section
+  class: [unfaded]
+  children:
+  -
+    type: div
+    class: [full-width,gold-v-13,bg-cover,sticky-top]
+    style: "background-image: url('img/dinning_room.jpg')"
+  -
+    type: div
+    class: [story]
+    children:
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: Over the years, we have hosted a variety of events from weddings and birthdays to movie launches, luncheons, wrap parties, bridal showers, and corporate dinners.
+-
+  type: section
+  class: [info,centered]
+  children:
+  -
+    type: h5
+    class: [section-title]
+    content: Freemans can accommodate many party sizes.
+  -
+    type: p
+    content: Freemans has three private rooms available for seated dinner parties or cocktail receptions.  From 30 to 200 guests, the full second floor including the drawing room or the entire restaurant is available for rental.
+  -
+    type: a
+    class: [btn-line]
+    content: FREEMANS PRIVATE DINNING PACKAGES
+  -
+    type: a
+    class: [btn-line]
+    content: BOOK A PRIVATE ROOM
+-
+  type: section
+  class: [unfaded,info]
+  children:
+  -
+    type: div
+    class: [full-width,gold-v-13,bg-cover,sticky-top]
+    style: "background-image: url('img/wine-room.jpg')"
+  -
+    type: div
+    class: [story]
+    children:
+    -
+      type: h4
+      class: [section-title]
+      children:
+      -
+        type: p
+        class: [highlight]
+        children:
+        -
+          type: span
+          content: THE WINE ROOM
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: "Our intimate working wine cellar makes for an exquisite atmosphere for dining.<strong>Seats 10-12 guests</strong>for sit-down lunch or dinner in your own private wine cellar."
+-
+  type: section
+  class: [unfaded,info]
+  children:
+  -
+    type: div
+    class: [full-width,gold-v-13,bg-cover,sticky-top]
+    style: "background-image: url('img/5.jpg')"
+  -
+    type: div
+    class: [story]
+    children:
+    -
+      type: h4
+      class: [section-title]
+      children:
+      -
+        type: p
+        class: [highlight]
+        children:
+        -
+          type: span
+          content: THE BLUE ROOM
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: "Seats <strong>13-20 guests</strong> for sit-down lunch or dinner; or up to 30 guests for a cocktail reception in an elegant 2nd floor dining room."
+-
+  type: section
+  class: [unfaded,info]
+  children:
+  -
+    type: div
+    class: [full-width,gold-v-13,bg-cover,sticky-top]
+    style: "background-image: url('img/red_room.jpg')"
+  -
+    type: div
+    class: [story]
+    children:
+    -
+      type: h4
+      class: [section-title]
+      children:
+      -
+        type: p
+        class: [highlight]
+        children:
+        -
+          type: span
+          content: THE RED ROOM
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: "The Red Room on the second floor is our largest single private room.  Seats <strong>20-30 guests</strong> for sit-down lunch or dinner; or up to 40 guests for a cocktail reception in an elegant 2nd floor dining room."
+-
+  type: section
+  class: [unfaded,info]
+  children:
+  -
+    type: div
+    class: [full-width,gold-v-13,bg-cover,sticky-top]
+    style: "background-image: url('img/9.jpg')"
+  -
+    type: div
+    class: [story]
+    children:
+    -
+      type: h4
+      class: [section-title]
+      children:
+      -
+        type: p
+        class: [highlight]
+        children:
+        -
+          type: span
+          content: FULL SECOND FLOOR
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: "For larger events on a grand scale, guests may rent the entire second floor of the restaurant. Seats <strong>30-80 guests</strong> for sit-down lunch or dinner; or up to 100 guests for a cocktail reception"
+-
+  type: section
+  class: [unfaded,info]
+  children:
+  -
+    type: div
+    class: [full-width,gold-v-13,bg-cover,sticky-top]
+    style: "background-image: url('img/full.jpg')"
+  -
+    type: div
+    class: [story]
+    children:
+    -
+      type: h4
+      class: [section-title]
+      children:
+      -
+        type: p
+        class: [highlight]
+        children:
+        -
+          type: span
+          content: FULL RESTAURANT
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: 140 guests for a seated dinner; up to 200 guests for a cocktail reception
+-
+  type: section
+  class: [info,centered]
+  children:
+  -
+    type: a
+    class: [btn-line]
+    content: FREEMANS PRIVATE DINNING PACKAGES
+  -
+    type: a
+    class: [btn-line]
+    content: BOOK A PRIVATE ROOM

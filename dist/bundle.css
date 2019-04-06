@@ -260,7 +260,8 @@ div.floating-menu {
 
 .info p {
   margin-bottom: .8rem;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  width: 100%; }
 .info strong {
   font-weight: bold; }
 
@@ -337,5 +338,23 @@ div.tab dl.menu {
 
 .hide {
   display: none; }
+
+.gallery .thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-content: space-between;
+  background: #ebebeb; }
+
+.gallery .thumbnails a {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden; }
+
+.gallery .thumbnails img {
+  position: absolute;
+  top: 0;
+  height: 100%; }
 
 /*# sourceMappingURL=bundle.css.map */

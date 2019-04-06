@@ -1,0 +1,77 @@
+type: root
+children:
+-
+  type: section
+  id: logo
+  class: [logo, gold-v-1, align-center]
+  children:
+  -
+    type: h2
+    content: FREEMANS
+-
+  type: section
+  class: [unfaded,gallery]
+  children:
+  -
+    type: div
+    id: display
+    class: [full-width,gold-v-13,bg-cover,sticky-top]
+    style: "background-image: url('img/1.jpg')"
+  -
+    type: div
+    class: [thumbnails, full-width]
+    children:
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/1.jpg
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/2.jpg
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/3.jpg
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/4.jpg
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/5.jpg
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/6.jpg
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/7.jpg
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/8.jpg
+    -
+      type: a
+      children:
+      -
+        type: img
+        src: img/9.jpg

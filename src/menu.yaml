@@ -1,0 +1,307 @@
+type: root
+children:
+-
+  type: section
+  id: logo
+  class: [logo, gold-v-2, align-center]
+  children:
+  -
+    type: h2
+    content: FREEMANS
+  -
+    type: h3
+    content: Winter 2018 Menus
+-
+  type: section
+  class: [tabs]
+  children:
+  -
+    type: div
+    class: [nav,full-width,align-center]
+    children:
+    -
+      type: a
+      id: dinner
+      class: [current]
+      content: Dinner
+    -
+      type: a
+      id: dessert
+      content: Dessert
+    -
+      type: a
+      id: brunch
+      content: Brunch
+  -
+    type: div
+    id: dinner-tab
+    class: [tab]
+    children:
+    -
+      type: h5
+      class: [section-title, align-center]
+      content: STARTERS
+    -
+      type: dl
+      class: [menu]
+      children:
+      -
+        type: dt
+        content: Cheese Plate
+        children:
+        -
+          type: span
+          class: [price]
+          content: $28
+      -
+        type: dd
+        content: fruit compote, spiced nuts
+      -
+        type: dt
+        content: Littleneck Clams
+        children:
+        -
+          type: span
+          class: [price]
+          content: $20
+      -
+        type: dd
+        content: celeriac, aleppo pepper broth, toast points
+      -
+        type: dt
+        content: Tuna Tartare
+        children:
+        -
+          type: span
+          class: [price]
+          content: $121
+      -
+        type: dd
+        content: tarragon-mint pistachio pesto, wonton crisp
+    -
+      type: h5
+      class: [section-title, align-center]
+      content: SALAD
+    -
+      type: dl
+      class: [menu]
+      children:
+      -
+        type: dt
+        content: Red Gem Salad
+        children:
+        -
+          type: span
+          class: [price]
+          content: $17
+      -
+        type: dd
+        content: goat cheese, caraway-flatbread, juniper-parmesan dressing
+      -
+        type: dt
+        content: Kale & Quinoa Salad
+        children:
+        -
+          type: span
+          class: [price]
+          content: $18
+      -
+        type: dd
+        content: roasted baby beets, ninja radish, roasted shitake mushrooms, prosciutto, hone-citrus vinaigrette
+      -
+        type: dt
+        content: Grilled Calamari
+        children:
+        -
+          type: span
+          class: [price]
+          content: $18
+      -
+        type: dd
+        content: rocket arugula, cilantro, red watercress, scallions, crispy shallots, brown rice vinaigrette
+  -
+    type: div
+    id: dessert-tab
+    class: [tab,hide]
+    children:
+    -
+      type: h5
+      class: [section-title, align-center]
+      content: DESSERT
+    -
+      type: dl
+      class: [menu]
+      children:
+      -
+        type: dt
+        content: Flourless Chocolate Cake
+        children:
+        -
+          type: span
+          class: [price]
+          content: $12
+      -
+        type: dd
+        content: mixed berries & gelato
+      -
+        type: dt
+        content: Lemon Panna Cotta
+        children:
+        -
+          type: span
+          class: [price]
+          content: $12
+      -
+        type: dd
+        content: rhubarb compote, pistachio tuile
+      -
+        type: dt
+        content: Bananas Foster
+        children:
+        -
+          type: span
+          class: [price]
+          content: $12
+      -
+        type: dd
+        content: rum butterscotch sauce & vanilla ice cream
+      -
+        type: dt
+        content: Chocolate Brownie
+        children:
+        -
+          type: span
+          class: [price]
+          content: $12
+      -
+        type: dd
+        content: vanilla ice cream & chocolate sauce
+  -
+    type: div
+    id: brunch-tab
+    class: [tab,hide]
+    children:
+    -
+      type: h5
+      class: [section-title, align-center]
+      content: BRUNCH STARTERS
+    -
+      type: dl
+      class: [menu]
+      children:
+      -
+        type: dt
+        content: Devils on Horseback
+        children:
+        -
+          type: span
+          class: [price]
+          content: $12
+      -
+        type: dd
+      -
+        type: dt
+        content: Grilled Cheddar Toasts
+        children:
+        -
+          type: span
+          class: [price]
+          content: $13
+      -
+        type: dd
+      -
+        type: dt
+        content: Cinnamon Roll
+        children:
+        -
+          type: span
+          class: [price]
+          content: $12
+      -
+        type: dd
+        content: cream cheese frosting
+      -
+        type: dt
+        content: House-made Granola
+        children:
+        -
+          type: span
+          class: [price]
+          content: $14
+      -
+        type: dd
+        content: greek yogurt, bee pollen, blueberries, dried fruit, grapefruit honey
+      -
+        type: dt
+        content: Hummus Toast
+        children:
+        -
+          type: span
+          class: [price]
+          content: $15
+      -
+        type: dd
+        content: radish & fried chickpeas
+      -
+        type: dt
+        content: Fish Board
+        children:
+        -
+          type: span
+          class: [price]
+          content: $25
+      -
+        type: dd
+        content: smoked white fish salad, house-cured gravlax toast & picked vegetables
+    -
+      type: h5
+      class: [section-title, align-center]
+      content: BREAKFAST
+    -
+      type: dl
+      class: [menu]
+      children:
+      -
+        type: dt
+        content: Freanch Toast
+        children:
+        -
+          type: span
+          class: [price]
+          content: $16
+      -
+        type: dd
+        content: orange-honey ricotta cheese & blueberry maple syrup
+      -
+        type: dt
+        content: Buttermilk Pancakes
+        children:
+        -
+          type: span
+          class: [price]
+          content: $16
+      -
+        type: dd
+        content: apple pie filling, raisins, walnuts & maple syrup
+      -
+        type: dt
+        content: Egg White Omelet
+        children:
+        -
+          type: span
+          class: [price]
+          content: $16
+      -
+        type: dd
+        content: roasted butternut squash, arugula, goat cheese & mixed green salad
+      -
+        type: dt
+        content: Skillet Eggs
+        children:
+        -
+          type: span
+          class: [price]
+          content: $15
+      -
+        type: dd
+        content: spinach, tomato-bell, pepper sauce. add bacon +1, add cheese +1

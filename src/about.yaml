@@ -1,0 +1,120 @@
+type: root
+children:
+-  
+  type: section
+  id: logo
+  class: [logo, gold-v-1, align-center]
+  children:
+  -
+    type: h2
+    content: FREEMANS
+-
+  type: section
+  class: [unfaded]
+  children:
+  -
+    type: div
+    class: [full-width, gold-v-13, bg-cover, sticky-top]
+    style: "background-image: url('img/Outside-hero-shot.jpg')"
+  -
+    type: div
+    class: [story]
+    children:
+    -
+      type: h3
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: Down the Alleyway
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: the fall of 2004, Taavo Somer and William Tigertt happened upon a perfect cozy space at the end of an unused alley off the Bowery, and Freemans Restaurant was born.
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: idea of the restaurant was to make a rugged clandestine colonial American Tavern.
+    -
+      type: p
+      class: [highlight]
+      children:
+      -
+        type: span
+        content: "cuisine was also imagined to early American: Simple, Rustic, and inspired by Old World traditions."
+-
+  type: section
+  class: [info, centered]
+  children:
+  -
+    type: h5
+    class: [section-title]
+    content: HOURS
+  -
+    type: p
+    content: "<strong>Weekend Brunch</strong> - Sat-Sun 10AM to 4PM"
+  -
+    type: p
+    content: "<strong>Weekday Brunch</strong> - Mon-Fri 11AM to 4PM"
+  -
+    type: p
+    content: "<strong>Afternoon Cocktails & Light Fare</strong> - Every Day 4pm to 6pm"
+  -
+    type: p
+    content: "<strong>Dinner</strong> - 7 days a week- 6pm - 11:00PM"
+  -
+    type: p
+    content: "<strong>Late Night Menu</strong> - Friday & Saturday- 11:00PM-1:00AM"
+  -
+    type: p
+    content: "<strong>Bars</strong> - Friday & Saturday until 2AM</p>"
+-
+  type: section
+  class: [info, centered]
+  children:
+  -
+    type: h4
+    class: [section-title]
+    content: PHONE
+  -
+    type: p
+    content: "(212) 420-0012"
+  -
+    type: p
+    content: Location
+  -
+    type: p
+    content: END of Freemans Alley
+  -
+    type: p
+    children:
+    -
+      type: a
+      class: [btn-line]
+      href: "#"
+      content: LOST? CLICK FOR MAP
+  -
+    type: p
+    children:
+    -
+      type: a
+      class: [btn-line]
+      href: "#"
+      content: PURCHASE GIFT CARDS
+  -
+    type: p
+    children:
+    -
+      type: a
+      class: [btn-line]
+      href: "#"
+      content: ORDER FOOD DELIVERY VIA CAVIAR
+  -
+    type: p
+    content: Delivery available for weekday lunch 11am to 3:30pm at this time.
