@@ -44,10 +44,15 @@ table {
 input {
   background-color: rgba(255, 255, 255, 0); }
 
+html {
+  font-size: 3vmin; }
+  @media only screen and (min-width: 500px) {
+    html {
+      font-size: 15px; } }
+
 body {
   font-family: 'Merriweather', serif;
   color: #252525;
-  font-size: 3vmin;
   line-height: 1.3em;
   background-color: #ebebeb; }
 
@@ -63,17 +68,210 @@ h3 {
 h4 {
   font-size: 1.26em; }
 
+p, h3, h4 {
+  display: block; }
+  @media only screen and (min-width: 500px) {
+    p, h3, h4 {
+      max-width: 37rem; } }
+  @media only screen and (min-width: 1000px) {
+    p, h3, h4 {
+      max-width: 49rem; } }
+
 div.main {
   width: 100%;
+  max-width: 1280px;
   min-height: 100%;
   padding: 15px;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
   margin-bottom: -3.5rem; }
   div.main section {
     margin-bottom: 1rem; }
   div.main section:last-child {
     margin-bottom: 3.5rem; }
+  @media only screen and (min-width: 500px) {
+    div.main {
+      padding: 15px 10vw; } }
+  div.main .full-width {
+    width: 100vw;
+    max-width: 1280px;
+    margin-left: -15px; }
+    @media only screen and (min-width: 500px) {
+      div.main .full-width {
+        margin-left: -10vw; } }
+
+.bg-cover {
+  z-index: 101;
+  background-size: cover;
+  background-position: center center; }
+
+.story {
+  flex-direction: column;
+  z-index: 100;
+  padding: 1rem .5rem 1.5rem;
+  margin: 0 auto; }
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; }
+
+section.tabs .nav {
+  position: sticky;
+  z-index: 2;
+  top: 10px;
+  background-color: white;
+  font-size: 1.2em;
+  line-height: 2.6rem; }
+  section.tabs .nav a {
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    margin: 0 .8em; }
+    section.tabs .nav a:hover {
+      color: #7da7d9; }
+    section.tabs .nav a.current:after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      bottom: .7rem;
+      width: 100%;
+      height: .3em;
+      background-color: #7da7d9; }
+
+div.tab {
+  display: block; }
+  div.tab .section-title {
+    width: 100%;
+    margin: 2.2rem 0 1rem;
+    font-size: 1.2em;
+    color: #7da7d9; }
+  div.tab dl.menu {
+    display: block;
+    width: 25rem;
+    margin: 0 auto;
+    line-height: 1.6em; }
+    div.tab dl.menu dt {
+      position: relative;
+      width: 100%;
+      padding-right: 3rem;
+      font-weight: bold; }
+      div.tab dl.menu dt .price {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: normal; }
+    div.tab dl.menu dd {
+      width: 100%;
+      padding-right: 3rem;
+      margin-bottom: 1rem; }
+  @media only screen and (min-width: 900px) {
+    div.tab dl.menu {
+      font-size: 1.2em;
+      width: 40rem; } }
+
+.gallery .thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-content: space-between;
+  background: #ebebeb; }
+  @media only screen and (min-width: 500px) {
+    .gallery .thumbnails {
+      grid-template-columns: repeat(4, 1fr); } }
+  @media only screen and (min-width: 1000px) {
+    .gallery .thumbnails {
+      grid-template-columns: repeat(6, 1fr); } }
+
+.gallery .thumbnails a {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden; }
+
+.gallery .thumbnails img {
+  position: absolute;
+  top: 0;
+  height: 100%; }
+
+div.floating-menu {
+  position: fixed;
+  z-index: 999;
+  top: 10px;
+  left: 0;
+  display: block;
+  box-sizing: content-box;
+  padding: .4rem .4rem .4rem 15px;
+  transition: position .5s, background-color .5s; }
+  div.floating-menu .open, div.floating-menu .close {
+    width: 1.8rem;
+    height: 1.8rem; }
+  div.floating-menu .btn {
+    display: block;
+    position: relative;
+    top: 36%;
+    width: 100%;
+    height: 22%;
+    box-shadow: 0 0 0 1px #7da7d9 inset;
+    overflow: visible;
+    cursor: pointer; }
+    div.floating-menu .btn:before {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: absolute;
+      top: -164%;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 0 1px #7da7d9 inset; }
+    div.floating-menu .btn:after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: absolute;
+      top: 164%;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 0 1px #7da7d9 inset; }
+  div.floating-menu span {
+    display: none;
+    cursor: pointer; }
+  div.floating-menu.colored {
+    background-color: #7da7d9;
+    opacity: .9; }
+    div.floating-menu.colored .btn, div.floating-menu.colored .btn:before, div.floating-menu.colored .btn:after {
+      background-color: white; }
+  div.floating-menu.expand {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(125, 167, 217, 0.9), rgba(37, 37, 37, 0.9));
+    color: white;
+    opacity: 1;
+    animation: bounce-in .5s; }
+    div.floating-menu.expand span {
+      display: inline-block;
+      font-size: 2em; }
+      div.floating-menu.expand span.close {
+        position: absolute;
+        top: 15px;
+        left: 15px; }
+      div.floating-menu.expand span.page-link {
+        margin-bottom: 2rem;
+        text-align: center; }
+    div.floating-menu.expand .btn, div.floating-menu.expand .btn:before, div.floating-menu.expand .btn:after {
+      background-color: white; }
+    div.floating-menu.expand .open {
+      display: none; }
 
 .sticky-bottom {
   position: sticky;
@@ -130,73 +328,6 @@ footer {
     line-height: 1.26em;
     text-align: center; }
 
-div.floating-menu {
-  position: fixed;
-  z-index: 999;
-  top: 10px;
-  left: 0;
-  display: block;
-  box-sizing: content-box;
-  padding: .4rem .4rem .4rem 15px;
-  transition: position .5s, background-color .5s; }
-  div.floating-menu .open, div.floating-menu .close {
-    width: 1.8rem;
-    height: 1.8rem; }
-  div.floating-menu .btn {
-    display: block;
-    position: relative;
-    top: 36%;
-    width: 100%;
-    height: 22%;
-    box-shadow: 0 0 0 1px #7da7d9 inset;
-    overflow: visible; }
-    div.floating-menu .btn:before {
-      content: "";
-      display: block;
-      box-sizing: border-box;
-      overflow: hidden;
-      position: absolute;
-      top: -164%;
-      width: 100%;
-      height: 100%;
-      box-shadow: 0 0 0 1px #7da7d9 inset; }
-    div.floating-menu .btn:after {
-      content: "";
-      display: block;
-      box-sizing: border-box;
-      overflow: hidden;
-      position: absolute;
-      top: 164%;
-      width: 100%;
-      height: 100%;
-      box-shadow: 0 0 0 1px #7da7d9 inset; }
-  div.floating-menu span {
-    display: none; }
-  div.floating-menu.colored {
-    background-color: #7da7d9;
-    opacity: .9; }
-    div.floating-menu.colored .btn, div.floating-menu.colored .btn:before, div.floating-menu.colored .btn:after {
-      background-color: white; }
-  div.floating-menu.expand {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    padding: 15px;
-    width: 12.5rem;
-    height: 100%;
-    background: #7da7d9;
-    color: white;
-    opacity: 1;
-    animation: bounce-in .5s; }
-    div.floating-menu.expand span {
-      display: block;
-      font-size: 2em;
-      margin-bottom: 2rem; }
-    div.floating-menu.expand .btn, div.floating-menu.expand .btn:before, div.floating-menu.expand .btn:after {
-      background-color: white; }
-    div.floating-menu.expand .open {
-      display: none; }
-
 @keyframes bounce-in {
   0% {
     transform: translateX(-100%);
@@ -215,25 +346,6 @@ div.floating-menu {
 
 .gold-v-1 {
   height: 4.7vh; }
-
-.inset-border .full-width {
-  margin-left: -15px; }
-
-.full-width {
-  width: 100vw; }
-
-.bg-cover {
-  z-index: 100;
-  background-size: cover;
-  background-position: center center; }
-
-.sticky-top {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0; }
-
-.story {
-  padding: .5rem .5rem 1.5rem; }
 
 .align-bottom {
   display: flex;
@@ -264,6 +376,8 @@ div.floating-menu {
   width: 100%; }
 .info strong {
   font-weight: bold; }
+.info.centered {
+  text-align: center; }
 
 .section-title {
   width: 100%;
@@ -275,7 +389,7 @@ div.floating-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center; }
+  align-content: space-around; }
 
 a[class*="btn-"] {
   display: inline-block;
@@ -287,74 +401,7 @@ a[class*="btn-"] {
     border-radius: 4px;
     border: 1px solid #252525; }
 
-section.tabs .nav {
-  position: sticky;
-  z-index: 2;
-  top: 10px;
-  background-color: white;
-  font-size: 1.2em;
-  line-height: 2.6rem; }
-  section.tabs .nav a {
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    margin: 0 .8em; }
-    section.tabs .nav a:hover {
-      color: #7da7d9; }
-    section.tabs .nav a.current:after {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: -1;
-      bottom: .7rem;
-      width: 100%;
-      height: .3em;
-      background-color: #7da7d9; }
-
-div.tab .section-title {
-  width: 100%;
-  margin: 2.2rem 0 1rem;
-  font-size: 1.2em;
-  color: #7da7d9; }
-div.tab dl.menu {
-  display: block;
-  width: 20rem;
-  margin: 0 auto;
-  line-height: 1.6em; }
-  div.tab dl.menu dt {
-    position: relative;
-    width: 20rem;
-    padding-right: 3rem;
-    font-weight: bold; }
-    div.tab dl.menu dt .price {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-weight: normal; }
-  div.tab dl.menu dd {
-    width: 17rem;
-    margin-bottom: 1rem; }
-
 .hide {
   display: none; }
-
-.gallery .thumbnails {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  align-content: space-between;
-  background: #ebebeb; }
-
-.gallery .thumbnails a {
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
-  overflow: hidden; }
-
-.gallery .thumbnails img {
-  position: absolute;
-  top: 0;
-  height: 100%; }
 
 /*# sourceMappingURL=bundle.css.map */
