@@ -1,0 +1,26 @@
+
+div.main {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100%;
+  padding: 15px;
+  margin: 0 auto;
+  section { margin-bottom: 1rem; }
+  section:last-child {
+    margin-bottom: 3.5rem;
+  }
+  margin-bottom: -3.5rem;
+  @include breakPoint(500) {
+    padding: 15px 10vw;
+  }
+  
+   .full-width {
+     width: 100vw;
+     max-width: 1280px;
+     margin-left: -15px;
+     @include breakPoint(500) {
+       margin-left: -10vw;
+     }
+   }
+   
+}

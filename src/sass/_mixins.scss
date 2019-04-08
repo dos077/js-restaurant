@@ -39,3 +39,9 @@
     @content;
   }
 }
+
+@mixin breakPoint($min){
+  @media only screen and (min-width: #{$min}px) {
+    @content
+  }
+}

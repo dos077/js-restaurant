@@ -3,32 +3,12 @@
 @import 'setting';
 @import 'reset';
 @import 'mixins';
-
-body {
-  font-family: 'Merriweather', serif;
-  color: $prime-color;
-  font-size: 3vmin;
-  line-height: 1.3em;
-  background-color: $prime-bg;
-}
-
-h1 { font-size: 2.6em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.6em; }
-h4 { font-size: 1.26em; }
-
-div.main {
-  width: 100%;
-  min-height: 100%;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  section { margin-bottom: 1rem; }
-  section:last-child {
-    margin-bottom: 3.5rem;
-  }
-  margin-bottom: -3.5rem;  
-}
+@import 'typography';
+@import 'main-container';
+@import 'story';
+@import 'tabs';
+@import 'gallery';
+@import 'floating-menu';
 
 .sticky-bottom {
   position: sticky;
@@ -88,75 +68,6 @@ footer {
   }
 }
 
-div.floating-menu {
-  position: fixed;
-  z-index: 999;
-  top: 10px;
-  left: 0;
-  display: block;
-  box-sizing: content-box;
-  padding: .4rem .4rem .4rem 15px;
-  .open, .close { width: 1.8rem; height: 1.8rem; }
-  .btn{
-    display: block;
-    position: relative;
-    top: 36%;
-    width: 100%;
-    height: 22%;
-    box-shadow: 0 0 0 1px $acc-color inset;
-    overflow: visible;
-    &:before{
-      content: "";
-      display: block;
-      box-sizing: border-box;
-      overflow: hidden;
-      position: absolute;
-      top: -164%;
-      width: 100%;
-      height: 100%;
-      box-shadow: 0 0 0 1px $acc-color inset;
-    }
-    &:after{
-      content: "";
-      display: block;
-      box-sizing: border-box;
-      overflow: hidden;
-      position: absolute;
-      top: 164%;
-      width: 100%;
-      height: 100%;
-      box-shadow: 0 0 0 1px $acc-color inset;
-    }
-  }
-  span { display: none; }
-  &.colored {
-    background-color: $acc-color;
-    opacity: .9;
-    .btn, .btn:before, .btn:after {
-      background-color: white;
-    }
-  }
-  &.expand {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    padding: 15px;
-    width: 12.5rem;
-    height: 100%;
-    background: $acc-color;
-    color: white;
-    opacity: 1;
-    span {
-      display: block;
-      font-size: 2em;
-      margin-bottom: 2rem;
-    }
-    .btn, .btn:before, .btn:after { background-color: white; }
-    .open { display: none; }
-    animation: bounce-in .5s;
-  }
-  transition: position .5s, background-color .5s;
-}
 
 @keyframes bounce-in {
   0% { 
@@ -174,30 +85,6 @@ div.floating-menu {
 .gold-v-13 { height: 62vh; }
 .gold-v-2 { height: 9.5vh; }
 .gold-v-1 { height: 4.7vh; }
-
-
-.inset-border {
- .full-width { margin-left: -15px; } 
-}
-.full-width {
-  width: 100vw;
-}
-
-.bg-cover {
-  z-index: 100;
-  background-size: cover;
-  background-position: center center;
-}
-
-
-.sticky-top {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-.story {
-  padding: .5rem .5rem 1.5rem;
-}
 
 .align-bottom {
   display: flex;
@@ -232,6 +119,7 @@ div.floating-menu {
     width: 100%;
   }
   strong { font-weight: bold; }
+  &.centered { text-align: center; }
 }
 
 .section-title {
@@ -245,7 +133,7 @@ div.floating-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
+  align-content: space-around;
 }
 
 a[class*="btn-"] {
@@ -260,82 +148,4 @@ a[class*="btn-"] {
   }
 }
 
-section.tabs {
-  .nav {
-    position: sticky;
-    z-index: 2;
-    top: 10px;
-    background-color: white;
-    font-size: 1.2em;
-    line-height: 2.6rem;
-    a {
-      position: relative;
-      z-index: 1;
-      text-decoration: none;
-      margin: 0 .8em;
-      &:hover{ color: $acc-color; }
-      &.current:after {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: -1;
-        bottom: .7rem;
-        width: 100%;
-        height: .3em;
-        background-color: $acc-color;
-      }
-    }
-  }
-}
-
-div.tab {
-  .section-title {
-    width: 100%;
-    margin: 2.2rem 0 1rem;
-    font-size: 1.2em;
-    color: $acc-color;
-  }
-  dl.menu {
-    display: block;
-    width: 20rem;
-    margin: 0 auto;
-    line-height: 1.6em;
-    dt {
-      position: relative;
-      width: 20rem;
-      padding-right: 3rem;
-      font-weight: bold;
-      .price {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-weight: normal;
-      }
-    }
-    dd{
-      width: 17rem;
-      margin-bottom: 1rem;
-    }
-  }
-}
 .hide { display: none; }
-
-.gallery .thumbnails { 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  align-content: space-between;
-  background: #ebebeb;
-}
-.gallery .thumbnails a{
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
-  overflow: hidden;
-}
-.gallery .thumbnails img {
-  position: absolute;
-  top: 0;
-  height: 100%;
-}

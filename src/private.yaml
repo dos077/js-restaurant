@@ -78,7 +78,7 @@ children:
       children:
       -
         type: span
-        content: "Our intimate working wine cellar makes for an exquisite atmosphere for dining.<strong>Seats 10-12 guests</strong>for sit-down lunch or dinner in your own private wine cellar."
+        content: "Our intimate working wine cellar makes for an exquisite atmosphere for dining. <strong>Seats 10-12 guests</strong> for sit-down lunch or dinner in your own private wine cellar."
 -
   type: section
   class: [unfaded,info]

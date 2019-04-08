@@ -1,0 +1,68 @@
+
+section.tabs {
+  .nav {
+    position: sticky;
+    z-index: 2;
+    top: 10px;
+    background-color: white;
+    font-size: 1.2em;
+    line-height: 2.6rem;
+    a {
+      position: relative;
+      z-index: 1;
+      text-decoration: none;
+      margin: 0 .8em;
+      &:hover{ color: $acc-color; }
+      &.current:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        bottom: .7rem;
+        width: 100%;
+        height: .3em;
+        background-color: $acc-color;
+      }
+    }
+  }
+}
+
+div.tab {
+  display: block;
+  .section-title {
+    width: 100%;
+    margin: 2.2rem 0 1rem;
+    font-size: 1.2em;
+    color: $acc-color;
+  }
+  dl.menu {
+    display: block;
+    width: 25rem;
+    margin: 0 auto;
+    line-height: 1.6em;
+    dt {
+      position: relative;
+      width: 100%;
+      padding-right: 3rem;
+      font-weight: bold;
+      .price {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: normal;
+      }
+    }
+    dd{
+      width: 100%;
+      padding-right: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+  @include breakPoint(900) {
+    dl.menu {
+      font-size: 1.2em;
+      width: 40rem;
+    }
+  }
+}
