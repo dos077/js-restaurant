@@ -273,6 +273,22 @@ div.floating-menu {
     div.floating-menu.expand .open {
       display: none; }
 
+@keyframes bounce-in {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes bounce-out {
+  0% {
+    transform: translateY(0);
+    opacity: 0; }
+  80% {
+    transform: translateY(100%);
+    opacity: 1; }
+  20% {
+    transform: translateY(0); } }
 .sticky-bottom {
   position: sticky;
   z-index: 101;
@@ -328,13 +344,6 @@ footer {
     line-height: 1.26em;
     text-align: center; }
 
-@keyframes bounce-in {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0; }
-  100% {
-    transform: translateX(0);
-    opacity: 1; } }
 [class*='gold-v'] {
   overflow: hidden; }
 
@@ -402,6 +411,9 @@ a[class*="btn-"] {
     border: 1px solid #252525; }
 
 .hide {
-  display: none; }
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden; }
 
 /*# sourceMappingURL=bundle.css.map */

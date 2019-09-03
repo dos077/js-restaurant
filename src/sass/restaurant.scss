@@ -68,18 +68,6 @@ footer {
   }
 }
 
-
-@keyframes bounce-in {
-  0% { 
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 [class*='gold-v'] { overflow: hidden; }
 
 .gold-v-13 { height: 62vh; }
@@ -148,4 +136,9 @@ a[class*="btn-"] {
   }
 }
 
-.hide { display: none; }
+.hide { 
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
