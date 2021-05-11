@@ -18,6 +18,6 @@
     "fs": "0.0.1-security",
     "js-yaml": "^3.13.1",
     "js-yaml-loader": "^1.2.2",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   }
 }
